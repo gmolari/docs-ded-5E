@@ -2,9 +2,9 @@ import api from "../utils/api";
 
 export default function useApi(){
 
-    async function getApi(info){
-        const infos = await api.get()
-        return infos
+    async function getApi(path){
+        const infos = await api.get(path)
+        return infos.data
     }
 
     return {
