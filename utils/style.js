@@ -10,12 +10,17 @@ export const styles = StyleSheet.create({
       flex: 1,
       backgroundColor: 'grey',
       alignItems: 'center',
-      justifyContent: 'center',
+      paddingTop: '2em'
     },
     title: {
-      fontSize: '2rem',
+      fontSize: '1.5em',
       fontWeight: 'bold',
       fontFamily: font_family,
       color: title_color,
+      textAlign: 'center'
     },
+    h2: {
+      fontSize: '1.1em',
+      textAlign: 'center'
+    }
 })

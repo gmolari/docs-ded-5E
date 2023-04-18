@@ -4,11 +4,11 @@ import { useEffect, useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-// API
-import api from './utils/api';
-
 // Pages
 import { HomeScreen } from './pages/HomeScreen';
+
+// CONTEXT
+import {ContextProvider} from './context/Context';
 
 const Stack = createNativeStackNavigator();
 
@@ -28,9 +28,11 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-      </Stack.Navigator>
+      <ContextProvider>
+        <Stack.Navigator screenOptions={{headerShown: false}}>
+          <Stack.Screen name="Home" component={HomeScreen} />
+        </Stack.Navigator>
+      </ContextProvider>
     </NavigationContainer>
   );
 }
