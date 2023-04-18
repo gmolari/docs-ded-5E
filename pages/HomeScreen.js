@@ -1,10 +1,11 @@
+import { useContext, useEffect } from "react";
 import { View, Text } from "react-native";
-
-import { styles } from "../utils/style";
 
 import { Context } from "../context/Context";
 
-import { useContext, useEffect } from "react";
+import { Button } from "../components/Button";
+
+import { styles } from "../utils/style";
 
 export function HomeScreen({ navigation }) {
 
@@ -22,7 +23,10 @@ export function HomeScreen({ navigation }) {
             <Text style={styles.h2}> 
                 Welcome to our documentation, what you want to see? 
             </Text>
+            <Button buttonTitle="Races" onPress={() => navigation.navigate("Races")} />
+            <Button buttonTitle="Spells" onPress={() => navigation.navigate("Spells")} />
+            <Button buttonTitle="Items" onPress={() => navigation.navigate("Items")} />
+            <Button buttonTitle="Monsters" onPress={() => navigation.navigate("Monsters")} />
         </View>
-        // <Button onPress={() => navigation.navigate("Raca")}/>
     )
 }
