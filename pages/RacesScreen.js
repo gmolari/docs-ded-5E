@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { View, Text } from "react-native";
 
 import { styles } from "../utils/style";
@@ -12,9 +12,14 @@ export function RacesScreen({ navigation }) {
 
     const {getApi} = useContext(Context);
 
+    // races data
+    const [races, setRaces] = useState();
+    // to find, current race
+    const [cRace, setCRace] = useState();
+
     useEffect(() => {
         (async ()=>{
-            console.log(await getApi('races/elf'))
+            setRaces(await getApi('races/'))
         })()
     }, [])
 

@@ -12,9 +12,7 @@ export function HomeScreen({ navigation }) {
     const {getApi} = useContext(Context);
 
     useEffect(() => {
-        (async ()=>{
-            console.log(await getApi('races/elf'))
-        })()
+
     }, [])
 
     return (

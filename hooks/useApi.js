@@ -7,8 +7,38 @@ export default function useApi(){
         return infos.data
     }
 
+    async function getRaces(){
+      const infos = await api.get('races')
+      return infos.data
+    }
+    
+    async function getSpells(){
+      const infos = await api.get('spells')
+      return infos.data
+    }
+
+    async function getEquipment(){
+      const infos = await api.get('equipment-categories')
+      return infos.data
+    }
+
+    async function getMonsters(){
+      const infos = await api.get('monsters')
+      return infos.data
+    }
+
+    async function getMagicItems(){
+      const infos = await api.get('magic-items')
+      return infos.data
+    }
+
     return {
-        getApi
+        getApi,  
+        getEquipment,
+        getMonsters,
+        getRaces,
+        getSpells,
+        getMagicItems
     }
 }
 

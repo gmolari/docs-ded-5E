@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { View, Text } from "react-native";
 
 import { styles } from "../utils/style";
@@ -12,9 +12,14 @@ export function SpellsScreen({ navigation }) {
 
     const {getApi} = useContext(Context);
 
+    // spells data
+    const [spells, setSpells] = useState();
+    // to find, current spell
+    const [cSpell, setCSpell] = useState();
+
     useEffect(() => {
         (async ()=>{
-            console.log(await getApi('races/elf'))
+            console.log(await getApi('spells'))
         })()
     }, [])
 
