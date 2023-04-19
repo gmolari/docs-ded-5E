@@ -6,6 +6,7 @@ import { Context } from "../context/Context";
 import { Button } from "../components/Button";
 
 import { styles } from "../utils/style";
+
 import { BackgroundImage } from "../components/BackgroundImage";
 
 export function HomeScreen({ navigation }) {
@@ -25,10 +26,10 @@ export function HomeScreen({ navigation }) {
                         Welcome to our documentation, what you want to see? 
                     </Text>
                     <View style={styles.container_buttons} >
-                        <Button buttonTitle="Races" onPress={() => navigation.navigate("Races")} />
-                        <Button buttonTitle="Spells" onPress={() => navigation.navigate("Spells")} />
-                        <Button buttonTitle="Items" onPress={() => navigation.navigate("Items")} />
-                        <Button buttonTitle="Monsters" onPress={() => navigation.navigate("Monsters")} />
+                        <Button buttonTitle="Races" onPress={() => navigation.navigate("Races")} style={styles.container_button} />
+                        <Button buttonTitle="Spells" onPress={() => navigation.navigate("Spells")} style={styles.container_button} />
+                        <Button buttonTitle="Items" onPress={() => navigation.navigate("Items")} style={styles.container_button} />
+                        <Button buttonTitle="Monsters" onPress={() => navigation.navigate("Monsters")} style={styles.container_button} />
                     </View>
                 </View>
             </BackgroundImage>

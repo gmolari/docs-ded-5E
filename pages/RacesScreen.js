@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { View, Text } from "react-native";
 
 import { styles } from "../utils/style";
@@ -7,6 +7,7 @@ import { Context } from "../context/Context";
 
 import { Button } from "../components/Button";
 
+import { BackgroundImage } from "../components/BackgroundImage";
 
 export function RacesScreen({ navigation }) {
 
@@ -17,17 +18,14 @@ export function RacesScreen({ navigation }) {
     // to find, current race
     const [cRace, setCRace] = useState();
 
-    useEffect(() => {
-        (async ()=>{
-            setRaces(await getApi('races/'))
-        })()
-    }, [])
-
     return (
-        <View style={styles.container} >
-            <Text style={styles.title} >Races down here</Text>
-            <Text style={styles.h2} >races...</Text>
-            <Button buttonTitle="Back to Home" onPress={() => navigation.navigate("Home")} />
-        </View>
+        <>
+            <BackgroundImage>
+                <View style={styles.container} >
+                    <Text style={styles.title} >Races down here</Text>
+                    <Button buttonTitle="Back to Home" onPress={() => navigation.navigate("Home")} />
+                </View>
+            </BackgroundImage>
+        </>
     )
 }

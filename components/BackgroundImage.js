@@ -1,18 +1,28 @@
-import { ImageBackground, StyleSheet } from "react-native";
+import { Image, ScrollView } from "react-native";
 
 import image from '../assets/wallpaper.jpg'
 
 export function BackgroundImage({ children }) {
     return (
-        <ImageBackground source={image} resizeMode="cover" style={styles.image}>
-            {children}
-        </ImageBackground>
+        <>
+            <Image
+                source={image}
+                style={{position:'absolute',
+                        left:0, 
+                        right:0, 
+                        top:0,
+                        bottom:0}}
+            />
+            <ScrollView 
+                style={{backgroundColor:'#0000009c',
+                        position:'absolute',
+                        left:0,
+                        right:0,
+                        top:0,
+                        bottom:0}}
+            >
+                {children}
+            </ScrollView>
+        </>
     )
 }
-
-const styles = StyleSheet.create({
-    image: {
-      flex: 1,
-      justifyContent: 'center',
-    }
-})

@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { View, Text } from "react-native";
 
 import { styles } from "../utils/style";
@@ -7,33 +7,34 @@ import { Context } from "../context/Context";
 
 import { Button } from "../components/Button";
 
+import { useQuery } from "react-query";
+
+import { BackgroundImage } from "../components/BackgroundImage";
 
 export function ItemsScreen({ navigation }) {
 
-    const {getApi} = useContext(Context);
+    const { getMagicItems } = useContext(Context);
 
-    // categories data
-    const [categories, setCategories] = useState();
-    // magic items data
-    const [magicItems, setMagicItems] = useState();
+    const magicItems = useQuery({ queryFn: getMagicItems, queryKey: 'items' });
     
     // to find, current magic item  
     const [cMagicItems, setCMagicItems] = useState();
     // to find, current categorie
     const [cCatergorie, setCCategorie] = useState();
 
-    useEffect(() => {
-        (async ()=>{
-            console.log(await getApi('equipment-categories'))
-            console.log(await getApi('magic-items'))
-        })()
-    }, [])
-
     return (
-        <View style={styles.container} >
-            <Text style={styles.title} >Items down here</Text>
-            <Text style={styles.h2} >items...</Text>
-            <Button buttonTitle="Back to Home" onPress={() => navigation.navigate("Home")} />
-        </View>
+        <>
+            <BackgroundImage>
+                <View style={styles.container} >
+                    <Text style={styles.title} >Items down here</Text>
+                    <Button buttonTitle="Back to Home" onPress={() => navigation.navigate("Home")} />
+                    {
+                        magicItems.data?.results.map(index => 
+                            <Text key={index.name}> {index.name} </Text>
+                        )
+                    }
+                </View>
+            </BackgroundImage>
+        </>
     )
 }

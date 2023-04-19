@@ -27,6 +27,7 @@ export const styles = StyleSheet.create({
     h2: {
       fontSize: '1.1em',
       textAlign: 'center',
+      color: '#fff',
     },
     button: {
       height: '3rem',
@@ -48,5 +49,8 @@ export const styles = StyleSheet.create({
       marginTop: '20%',
       justifyContent: 'space-around',
       alignItems: 'center',
+    },
+    container_button: {
+      marginBottom: '8vh'
     }
 })
