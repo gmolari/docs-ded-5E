@@ -11,10 +11,9 @@ import { MonstersScreen } from './pages/MonstersScreen';
 
 // CONTEXT
 import {ContextProvider} from './context/Context';
+import Query from './context/Query';
 
 const Stack = createNativeStackNavigator();
-
-import Query from './context/Query';
 
 export default function App() {
 
@@ -22,13 +21,13 @@ export default function App() {
     <NavigationContainer>
       <Query>
         <ContextProvider>
-            <Stack.Navigator screenOptions={{headerShown: false}}>
-              <Stack.Screen name="Home" component={HomeScreen} />
-              <Stack.Screen name="Races" component={RacesScreen} />
-              <Stack.Screen name="Spells" component={SpellsScreen} />
-              <Stack.Screen name="Items" component={ItemsScreen} />
-              <Stack.Screen name="Monsters" component={MonstersScreen} />
-            </Stack.Navigator>
+              <Stack.Navigator screenOptions={{headerShown: false}}>
+                <Stack.Screen name="Home" component={HomeScreen} />
+                <Stack.Screen name="Races" component={RacesScreen} />
+                <Stack.Screen name="Spells" component={SpellsScreen} />
+                <Stack.Screen name="Items" component={ItemsScreen} />
+                <Stack.Screen name="Monsters" component={MonstersScreen} />
+              </Stack.Navigator>
           </ContextProvider>
       </Query>
     </NavigationContainer>

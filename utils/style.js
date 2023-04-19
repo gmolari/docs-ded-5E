@@ -8,25 +8,29 @@ export const styles = StyleSheet.create({
     // Geral 
     container: {
       flex: 1,
-      backgroundColor: 'grey',
+      backgroundColor: 'transparent',
       alignItems: 'center',
-      paddingTop: '2em'
+      // justifyContent: 'center',
+      paddingTop: '2rem',
+      paddingBottom: '2rem',
+      paddingLeft: '1rem',
+      paddingRight: '1rem',
     },
     title: {
       fontSize: '1.5em',
       fontWeight: 'bold',
       fontFamily: font_family,
       color: title_color,
-      textAlign: 'center'
+      textAlign: 'center',
+      marginBottom: '2rem',
     },
     h2: {
       fontSize: '1.1em',
-      textAlign: 'center'
+      textAlign: 'center',
     },
     button: {
-      height: '2rem',
+      height: '3rem',
       width: '80%',
-      marginTop: '1rem',
       backgroundColor: 'transparent',
       border: `2px solid ${title_color}`,
       borderRadius: '5px',
@@ -37,4 +41,12 @@ export const styles = StyleSheet.create({
       fontFamily: font_family,
       color: title_color,
     },
+    // HOME
+    container_buttons: {
+      flex: 1,
+      width: '100%',
+      marginTop: '20%',
+      justifyContent: 'space-around',
+      alignItems: 'center',
+    }
 })

@@ -1,4 +1,4 @@
-import { host } from "./util";
+import { host } from "./host";
 import axios from "axios";
 
 const api = axios.create({
