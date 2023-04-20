@@ -1,15 +1,15 @@
 import { useContext, useState } from "react";
 import { View, Text } from "react-native";
+import { useQuery } from "react-query";
 
 import { styles } from "../utils/style";
 
 import { Context } from "../context/Context";
 
+import { BackgroundImage } from "../components/BackgroundImage";
 import { Button } from "../components/Button";
 
-import { useQuery } from "react-query";
 
-import { BackgroundImage } from "../components/BackgroundImage";
 
 export function ItemsScreen({ navigation }) {
 
@@ -30,7 +30,7 @@ export function ItemsScreen({ navigation }) {
                     <Button buttonTitle="Back to Home" onPress={() => navigation.navigate("Home")} />
                     {
                         magicItems.data?.results.map(index => 
-                            <Text key={index.name}> {index.name} </Text>
+                            <Text style={styles.text} key={index.name}>{index.name}</Text>
                         )
                     }
                 </View>

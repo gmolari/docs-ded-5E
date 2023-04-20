@@ -14,7 +14,7 @@ export function BackgroundImage({ children }) {
                         bottom:0}}
             />
             <ScrollView 
-                style={{backgroundColor:'#0000009c',
+                style={{backgroundColor:'#000000b0',
                         position:'absolute',
                         left:0,
                         right:0,

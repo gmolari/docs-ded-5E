@@ -6,8 +6,8 @@ import { styles } from "../utils/style";
 import { Context } from "../context/Context";
 
 import { Button } from "../components/Button";
-
 import { BackgroundImage } from "../components/BackgroundImage";
+
 
 export function SpellsScreen({ navigation }) {
 

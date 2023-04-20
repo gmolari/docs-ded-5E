@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 
-var font_family = 'Verdana'
-var title_color = '#00ced1'
+var font_family = 'Dungeon'
+var title_color = '#dd4214'
 var text_color = '#fff'
 
 export const styles = StyleSheet.create({
@@ -17,17 +17,27 @@ export const styles = StyleSheet.create({
       paddingRight: '1rem',
     },
     title: {
-      fontSize: '1.5em',
+      fontSize: '2rem',
       fontWeight: 'bold',
       fontFamily: font_family,
+      letterSpacing: 2,
       color: title_color,
       textAlign: 'center',
       marginBottom: '2rem',
     },
-    h2: {
-      fontSize: '1.1em',
+    subtitle: {
+      fontFamily: font_family,
+      letterSpacing: 1,
+      fontSize: '1.5rem',
       textAlign: 'center',
-      color: '#fff',
+      color: text_color,
+    },
+    text: {
+      fontFamily: font_family,
+      letterSpacing: 1,
+      fontSize: '1.5rem',
+      textAlign: 'center',
+      color: text_color,
     },
     button: {
       height: '3rem',
@@ -40,13 +50,14 @@ export const styles = StyleSheet.create({
     },
     buttonText: {
       fontFamily: font_family,
+      fontSize: '1.5rem',
       color: title_color,
     },
     // HOME
     container_buttons: {
       flex: 1,
       width: '100%',
-      marginTop: '20%',
+      marginTop: '10%',
       justifyContent: 'space-around',
       alignItems: 'center',
     },

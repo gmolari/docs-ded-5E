@@ -3,11 +3,12 @@ import { View, Text } from "react-native";
 
 import { styles } from "../utils/style";
 
+import { Button } from "../components/Button";
+import { BackgroundImage } from "../components/BackgroundImage";
+
 import { Context } from "../context/Context";
 
-import { Button } from "../components/Button";
 
-import { BackgroundImage } from "../components/BackgroundImage";
 
 export function RacesScreen({ navigation }) {
 

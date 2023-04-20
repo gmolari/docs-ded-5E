@@ -13,9 +13,14 @@ import { MonstersScreen } from './pages/MonstersScreen';
 import {ContextProvider} from './context/Context';
 import Query from './context/Query';
 
+// Font
+import { useFont } from "./hooks/useFont";
+
 const Stack = createNativeStackNavigator();
 
 export default function App() {
+
+  useFont()
 
   return (
     <NavigationContainer>
