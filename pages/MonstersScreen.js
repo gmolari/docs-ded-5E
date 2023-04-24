@@ -9,6 +9,7 @@ import { Context } from "../context/Context";
 import { BackgroundImage } from "../components/BackgroundImage";
 import { Button } from "../components/Button";
 
+import SectionButton from "../components/SectionButton";
 
 
 export function MonstersScreen({ navigation }) {
@@ -25,13 +26,10 @@ export function MonstersScreen({ navigation }) {
         <>
             <BackgroundImage>
                 <View style={styles.container} >
-                    <Text style={styles.title} >Monsters down here</Text>
                     <Button buttonTitle="Back to Home" onPress={() => navigation.navigate("Home")} />
-                    {
-                        monsters.data?.results.map(index => 
-                            <Text style={styles.text} key={index.name}>{index.name}</Text>
-                        )
-                    }
+                    <Text style={styles.title} >Monsters down here</Text>
+
+                    <SectionButton items={monsters} textStyle={styles.colorItem} buttonStyle={styles.sectionItem} />
                 </View>
             </BackgroundImage>
         </>

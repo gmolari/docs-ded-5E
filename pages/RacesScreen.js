@@ -7,15 +7,17 @@ import { Button } from "../components/Button";
 import { BackgroundImage } from "../components/BackgroundImage";
 
 import { Context } from "../context/Context";
+import { useQuery } from "react-query";
 
+import SectionButton from "../components/SectionButton";
 
 
 export function RacesScreen({ navigation }) {
 
-    const {getApi} = useContext(Context);
+    const {getRaces} = useContext(Context);
 
     // races data
-    const [races, setRaces] = useState();
+    const races = useQuery({queryFn: getRaces, queryKey: ['getRaces']})
     // to find, current race
     const [cRace, setCRace] = useState();
 
@@ -23,8 +25,10 @@ export function RacesScreen({ navigation }) {
         <>
             <BackgroundImage>
                 <View style={styles.container} >
-                    <Text style={styles.title} >Races down here</Text>
                     <Button buttonTitle="Back to Home" onPress={() => navigation.navigate("Home")} />
+                    <Text style={styles.title} >Races down here</Text>
+
+                    <SectionButton items={races} textStyle={styles.colorItem} buttonStyle={styles.sectionItem} />
                 </View>
             </BackgroundImage>
         </>

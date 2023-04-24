@@ -17,7 +17,7 @@ export default function useApi(){
       return infos.data
     }
 
-    async function getEquipment(){
+    async function getEquipCategories(){
       const infos = await api.get('equipment-categories')
       return infos.data
     }
@@ -34,7 +34,7 @@ export default function useApi(){
 
     return {
         getApi,  
-        getEquipment,
+        getEquipCategories,
         getMonsters,
         getRaces,
         getSpells,

@@ -5,10 +5,10 @@ const Context = createContext();
 
 function ContextProvider({children}){
 
-    const {getApi, getEquipment, getMonsters, getSpells, getRaces, getMagicItems} = useApi();
+    const {getApi, getEquipCategories, getMonsters, getSpells, getRaces, getMagicItems} = useApi();
 
     return (
-        <Context.Provider value={{getApi, getEquipment, getMonsters, getSpells, getRaces, getMagicItems}}>
+        <Context.Provider value={{getApi, getEquipCategories, getMonsters, getSpells, getRaces, getMagicItems}}>
             {children}
         </Context.Provider>
     )

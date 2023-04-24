@@ -5,8 +5,8 @@ import { styles } from '../utils/style';
 export function Button({ buttonTitle, onPress, style }) {
 
   return (
-    <Pressable style={[styles.button, style && style]} onPress={onPress} >
-        <Text style={styles.buttonText} >{buttonTitle.toUpperCase()}</Text>
+    <Pressable style={[styles.button, style?.button && style.button]} onPress={onPress} >
+        <Text style={[styles.buttonText, style?.text && style.text]} >{buttonTitle.toUpperCase()}</Text>
     </Pressable>
   );
 }

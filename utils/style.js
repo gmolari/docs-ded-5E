@@ -25,6 +25,10 @@ export const styles = StyleSheet.create({
       textAlign: 'center',
       marginBottom: '2rem',
     },
+    titlePage: {
+      marginTop: '3rem',
+      marginBottom: '1rem'
+    },
     subtitle: {
       fontFamily: font_family,
       letterSpacing: 1,
@@ -52,6 +56,12 @@ export const styles = StyleSheet.create({
       fontFamily: font_family,
       fontSize: '1.5rem',
       color: title_color,
+    },
+    sectionItem: {
+      marginTop: '1em'
+    },
+    colorItem: {
+      color: 'blue'
     },
     // HOME
     container_buttons: {
