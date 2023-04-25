@@ -25,9 +25,9 @@ export const styles = StyleSheet.create({
       textAlign: 'center',
       marginBottom: '2rem',
     },
-    titlePage: {
-      marginTop: '3rem',
-      marginBottom: '1rem'
+    title_page: {
+      marginTop: '2rem',
+      marginBottom: '2rem'
     },
     subtitle: {
       fontFamily: font_family,
@@ -52,15 +52,23 @@ export const styles = StyleSheet.create({
       textAlign: 'center',
       justifyContent: 'center',
     },
-    buttonText: {
+    button_pressed: {
+      backgroundColor: title_color,
+      border: `2px solid ${title_color}`,
+      transitionDuration: '100ms',
+    },
+    button_text: {
       fontFamily: font_family,
       fontSize: '1.5rem',
       color: title_color,
     },
-    sectionItem: {
+    button_text_pressed: {
+      color: text_color,
+    },
+    section_item: {
       marginTop: '1em'
     },
-    colorItem: {
+    color_item: {
       color: 'blue'
     },
     // HOME

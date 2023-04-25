@@ -16,10 +16,10 @@ export function HomeScreen({ navigation }) {
                         Welcome to our documentation, what you want to see? 
                     </Text>
                     <View style={styles.container_buttons} >
-                        <Button buttonTitle="Races" onPress={() => navigation.navigate("Races")} style={{button: styles.container_button}} />
-                        <Button buttonTitle="Spells" onPress={() => navigation.navigate("Spells")} style={{button: styles.container_button}} />
-                        <Button buttonTitle="Items" onPress={() => navigation.navigate("Items")} style={{button: styles.container_button}} />
-                        <Button buttonTitle="Monsters" onPress={() => navigation.navigate("Monsters")} style={{button: styles.container_button}} />
+                        <Button buttonTitle="Races" onPressHandle={() => navigation.navigate("Races")} style={{button: styles.container_button}} />
+                        <Button buttonTitle="Spells" onPressHandle={() => navigation.navigate("Spells")} style={{button: styles.container_button}} />
+                        <Button buttonTitle="Items" onPressHandle={() => navigation.navigate("Items")} style={{button: styles.container_button}} />
+                        <Button buttonTitle="Monsters" onPressHandle={() => navigation.navigate("Monsters")} style={{button: styles.container_button}} />
                     </View>
                 </View>
             </BackgroundImage>

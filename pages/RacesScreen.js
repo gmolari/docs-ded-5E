@@ -25,10 +25,10 @@ export function RacesScreen({ navigation }) {
         <>
             <BackgroundImage>
                 <View style={styles.container} >
-                    <Button buttonTitle="Back to Home" onPress={() => navigation.navigate("Home")} />
-                    <Text style={styles.title} >Races down here</Text>
+                    <Button buttonTitle="Back to Home" onPressHandle={() => navigation.navigate("Home")} />
+                    <Text style={[styles.title, {marginTop:'2rem'}]} >Races down here</Text>
 
-                    <SectionButton items={races} textStyle={styles.colorItem} buttonStyle={styles.sectionItem} />
+                    <SectionButton items={races} textStyle={styles.color_item} buttonStyle={styles.section_item} />
                 </View>
             </BackgroundImage>
         </>

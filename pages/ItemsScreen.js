@@ -29,15 +29,14 @@ export function ItemsScreen({ navigation }) {
         <>
             <BackgroundImage>
                 <View style={styles.container} >
-                    <Text style={styles.title} >Items down here</Text>
-                    <Button buttonTitle="Back to Home" onPress={() => navigation.navigate("Home")} />
-                    <Text style={[styles.title, styles.titlePage]} >Magic Items</Text>
+                    <Button buttonTitle="Back to Home" onPressHandle={() => navigation.navigate("Home")} />
+                    <Text style={[styles.title, styles.title_page]} >Magic Items</Text>
                     
-                    <SectionButton items={magicItems} textStyle={styles.colorItem} buttonStyle={styles.sectionItem} />
+                    <SectionButton items={magicItems} textStyle={styles.color_item} buttonStyle={styles.section_item} />
 
-                    <Text style={[styles.title, styles.titlePage]} >Categories Of Items</Text>
+                    <Text style={[styles.title, styles.title_page]} >Categories Of Items</Text>
 
-                    <SectionButton items={categories} textStyle={styles.colorItem} buttonStyle={styles.sectionItem} />
+                    <SectionButton items={categories} textStyle={styles.color_item} buttonStyle={styles.section_item} />
                 </View>
             </BackgroundImage>
         </>

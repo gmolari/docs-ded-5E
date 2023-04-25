@@ -26,10 +26,10 @@ export function MonstersScreen({ navigation }) {
         <>
             <BackgroundImage>
                 <View style={styles.container} >
-                    <Button buttonTitle="Back to Home" onPress={() => navigation.navigate("Home")} />
-                    <Text style={styles.title} >Monsters down here</Text>
+                    <Button buttonTitle="Back to Home" onPressHandle={() => navigation.navigate("Home")} />
+                    <Text style={[styles.title, {marginTop:'2rem'}]} >Monsters down here</Text>
 
-                    <SectionButton items={monsters} textStyle={styles.colorItem} buttonStyle={styles.sectionItem} />
+                    <SectionButton items={monsters} textStyle={styles.color_item} buttonStyle={styles.section_item} />
                 </View>
             </BackgroundImage>
         </>

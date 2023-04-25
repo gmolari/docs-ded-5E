@@ -24,11 +24,11 @@ export function SpellsScreen({ navigation }) {
         <>
             <BackgroundImage>
                 <View style={styles.container} >
-                    <Button buttonTitle="Back to Home" onPress={() => navigation.navigate("Home")} />
+                    <Button buttonTitle="Back to Home" onPressHandle={() => navigation.navigate("Home")} />
 
-                    <Text style={styles.title} > Spells down here</Text>
+                    <Text style={[styles.title, {marginTop:'2rem'}]} > Spells down here</Text>
 
-                    <SectionButton items={spells} textStyle={styles.colorItem} buttonStyle={styles.sectionItem} />
+                    <SectionButton items={spells} textStyle={styles.color_item} buttonStyle={styles.section_item} />
 
                 </View>
             </BackgroundImage>
