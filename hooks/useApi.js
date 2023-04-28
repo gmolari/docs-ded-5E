@@ -41,14 +41,3 @@ export default function useApi(){
         getMagicItems
     }
 }
-
-// Example using api
-  // useEffect(() => {
-    // (async ()=>{
-    //   await api.get('races').then(response => {
-    //     setRaces(response.data.results)
-    //     console.log(response.data.results)
-    //   })
-    // })()
-    // console.log(races)
-  // }, [])
